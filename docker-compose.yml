@@ -9,6 +9,7 @@ services:
       - "25565:25565"
       - "24454:24454/udp"
     environment:
+      ENABLE_WHITELIST: true
       DIFFICULTY: hard
       EULA: true
       USE_AIKAR_FLAGS: true
