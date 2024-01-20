@@ -1,0 +1,65 @@
+services:
+  mc:
+    image: itzg/minecraft-server:latest
+    restart: unless-stopped
+    container_name: mc
+    tty: true
+    stdin_open: true
+    ports:
+      - "25565:25565"
+    environment:
+      DIFFICULTY: hard
+      EULA: true
+      USE_AIKAR_FLAGS: true
+      VERSION: "1.20.1"
+      TYPE: FABRIC
+      MEMORY: 8G
+      TZ: CET
+      ICON: https://cdn.discordapp.com/icons/517720163223601153/a_5b4040e27cf38669857315e0fae6ceaa.webp
+      MOTD: \u00a7b\u00a7nServeur Minecraft de l'EPL !
+      MODRINTH_PROJECTS: 
+       lithium,
+       lazydfu,
+       starlight,
+       ferrite-core,
+       memoryleakfix,
+       noisium,
+       carpet,
+       carpet-extra,
+       clumps,
+       alternate-current,
+       simple-voice-chat,
+       voice-chat-interaction,
+       edf-remastered,
+       chunky,
+       terralith,
+       nullscape,
+       amplified-nether,
+       ct-overhaul-village,
+       netherportalfix,
+       yungs-api,
+       yungs-better-dungeons,
+       yungs-better-mineshafts,
+       yungs-better-ocean-monuments,
+       yungs-better-strongholds,
+       yungs-better-nether-fortresses,
+       yungs-better-desert-temples,
+       yungs-better-witch-huts,
+       yungs-extras,
+       yungs-bridges,
+       yungs-better-jungle-temples,
+       yungs-better-end-island,
+       villager-names-serilum,
+       mob-captains,
+       crafting-tweaks,
+       inventory-sorting,
+       shulkerboxtooltip,
+       xaeros-minimap,
+       do-a-barrel-roll,
+       emi,rei,jei,
+       fastback
+      MODRINTH_DOWNLOAD_DEPENDENCIES: required
+    volumes:
+      # attach the relative directory 'data' to the container's /data path
+      - ./data:/data
+

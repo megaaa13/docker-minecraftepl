@@ -1,0 +1,8 @@
+To do on the server we will install it:
+
+Configure server to be accessed remotely, by opening ports
+Open ports 25565 and another one for SimpleVoiceChat
+
+Faire une prégen avec chunky
+
+Config l'ip avec megaaa.ovh
