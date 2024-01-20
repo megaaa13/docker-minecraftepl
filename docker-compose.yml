@@ -7,13 +7,14 @@ services:
     stdin_open: true
     ports:
       - "25565:25565"
+      - "24454:24454"
     environment:
       DIFFICULTY: hard
       EULA: true
       USE_AIKAR_FLAGS: true
       VERSION: "1.20.1"
       TYPE: FABRIC
-      MEMORY: 8G
+      MEMORY: 16G
       TZ: CET
       ICON: https://cdn.discordapp.com/icons/517720163223601153/a_5b4040e27cf38669857315e0fae6ceaa.webp
       MOTD: \u00a7b\u00a7nServeur Minecraft de l'EPL !
